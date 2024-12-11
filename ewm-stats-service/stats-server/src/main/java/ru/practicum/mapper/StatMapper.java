@@ -1,8 +1,10 @@
 package ru.practicum.mapper;
 
+import lombok.experimental.UtilityClass;
 import ru.practicum.StatDtoInput;
 import ru.practicum.model.Stat;
 
+@UtilityClass
 public class StatMapper {
 
     public static Stat toStat(StatDtoInput statDtoInput) {
