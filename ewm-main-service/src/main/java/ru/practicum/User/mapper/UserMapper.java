@@ -1,5 +1,7 @@
 package ru.practicum.User.mapper;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import ru.practicum.User.dto.UserDtoInput;
 import ru.practicum.User.dto.UserDtoOutput;
 import ru.practicum.User.model.User;
@@ -7,6 +9,7 @@ import ru.practicum.User.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserMapper {
     public static UserDtoOutput toUserDto(final User user) {
         final UserDtoOutput userDtoOutput = new UserDtoOutput();
