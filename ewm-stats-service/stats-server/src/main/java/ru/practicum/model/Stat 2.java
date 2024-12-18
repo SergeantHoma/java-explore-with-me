@@ -1,4 +1,4 @@
-package ru.practicum.User.model;
+package ru.practicum.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,20 +10,28 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "users")
-
-public class User {
+@Table(name = "stats")
+public class Stat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "app", nullable = false)
+    private String app;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    @Column(name = "uri", nullable = false)
+    private String uri;
+
+    @Column(name = "ip", nullable = false)
+    private String ip;
+
+    @Column(name = "time_stamp", nullable = false)
+    private LocalDateTime timestamp;
 }
